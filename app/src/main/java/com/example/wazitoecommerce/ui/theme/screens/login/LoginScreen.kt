@@ -51,7 +51,7 @@ fun LoginScreen(navController: NavHostController) {
         .background(color = Color.LightGray)
         .fillMaxSize()
         .paint(
-            painterResource(id =R.drawable.back5),
+            painterResource(id =R.drawable.back4),
             contentScale = ContentScale.FillBounds
         ),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -60,8 +60,8 @@ fun LoginScreen(navController: NavHostController) {
     {
         Spacer(modifier = Modifier.height(30.dp))
 
-        Text(text = "Welcome",
-            fontSize = 60.sp,
+        Text(text = "Login As an Admin",
+            fontSize = 50.sp,
             fontWeight = FontWeight.ExtraBold,
             fontFamily = FontFamily.Cursive)
 
@@ -111,9 +111,7 @@ fun LoginScreen(navController: NavHostController) {
         )
         Spacer(modifier = Modifier.height(30.dp))
 
-        Button(onClick = {
-            navController.navigate(ROUT_DASHBOARD)
-            // HANDLE LOGIN LOGIC //
+        Button(onClick = { // HANDLE LOGIN LOGIC //
             var xyz = AuthViewModel(navController, context)
             xyz.login(email.text,password.text)
 
@@ -136,13 +134,15 @@ fun LoginScreen(navController: NavHostController) {
         }
 
 
-        Text(text = "ADD PRODUCT",
+
+        androidx.compose.material3.Text(text = "Continue as guest",
             fontSize = 20.sp,
             textDecoration = TextDecoration.Underline,
             modifier = Modifier.clickable {
-                navController.navigate(ROUT_ADDPRODUCT)
+                navController.navigate(ROUT_DASHBOARD)
 
             })
+
 
     }
 }

@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -46,7 +47,7 @@ fun SignupScreen(navController: NavHostController) {
         modifier = Modifier
             .fillMaxSize()
             .paint(
-                painterResource(id = R.drawable.back5),
+                painterResource(id = R.drawable.back4),
                 contentScale = ContentScale.FillBounds
             ),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -58,7 +59,15 @@ fun SignupScreen(navController: NavHostController) {
             fontWeight = FontWeight.ExtraBold,
             fontFamily = FontFamily.Cursive
         )
-        Spacer(modifier = Modifier.height(30.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+
+
+        Text(text = "Signup As an Admin",
+            fontSize = 30.sp,
+            fontWeight = FontWeight.ExtraBold,
+            fontFamily = FontFamily.Cursive)
+
+        Spacer(modifier = Modifier.height(10.dp))
 
         var name by remember { mutableStateOf("") }
         var email by remember { mutableStateOf("") }

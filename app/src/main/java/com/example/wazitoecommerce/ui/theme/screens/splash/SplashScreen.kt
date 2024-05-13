@@ -47,7 +47,7 @@ fun SplashScreen(navController: NavHostController){
             navController.navigate(ROUT_LOGIN)
         }
 
-        Image(painter = painterResource(id = R.drawable.shop),
+        Image(painter = painterResource(id = R.drawable.shop3),
             contentDescription = "esto",
             modifier =Modifier.size(200.dp)
         )

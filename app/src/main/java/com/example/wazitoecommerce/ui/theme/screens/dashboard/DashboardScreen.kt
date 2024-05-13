@@ -38,6 +38,7 @@ import com.example.wazitoecommerce.navigation.ROUT_ELECTRONIC
 import com.example.wazitoecommerce.navigation.ROUT_GROCERIES
 import com.example.wazitoecommerce.navigation.ROUT_HOME
 import com.example.wazitoecommerce.navigation.ROUT_PHARMACY
+import com.example.wazitoecommerce.navigation.ROUT_VIEWRODUCT
 import com.example.wazitoecommerce.ui.theme.lBlue
 
 
@@ -47,7 +48,7 @@ fun DashboardScreen(navController: NavHostController){
    Column (modifier = Modifier
       .fillMaxSize()
       .paint(
-           painterResource(id = R.drawable.back1),
+           painterResource(id = R.drawable.back4),
    contentScale = ContentScale.FillBounds
    )
    ){
@@ -70,7 +71,7 @@ fun DashboardScreen(navController: NavHostController){
          }
          Spacer(modifier = Modifier.width(100.dp))
 
-         Image(painter = painterResource(id =R.drawable.amazon),
+         Image(painter = painterResource(id =R.drawable.shop3),
             contentDescription ="serv" ,
             modifier = Modifier.size(80.dp))
       }
@@ -127,19 +128,19 @@ fun DashboardScreen(navController: NavHostController){
             val mContext= LocalContext.current
             Card(modifier = Modifier.size(width = 150.dp, height = 100.dp)
                .clickable {
-                  navController.navigate(ROUT_HOME)
+                  navController.navigate(ROUT_VIEWRODUCT)
                }) {
                Column {
                   Box (modifier = Modifier
                      .fillMaxWidth()
-                     .clickable {  Toast.makeText(mContext,"Clicked on main image",
-                        Toast.LENGTH_LONG).show() },
+                     .clickable {
+                        Toast.makeText(mContext,"Clicked on main image", Toast.LENGTH_LONG).show() },
                      contentAlignment = Alignment.Center){
                      Image(painter = painterResource(id = R.drawable.home),
                         contentDescription ="serv" ,
                         modifier = Modifier.size(50.dp))
                   }
-                  Text(text = "Home", fontSize = 15.sp,
+                  Text(text = "View More Products", fontSize = 15.sp,
                      modifier = Modifier.fillMaxWidth(),
                      textAlign = TextAlign.Center)
                }

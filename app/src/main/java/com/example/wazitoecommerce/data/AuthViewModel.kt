@@ -5,6 +5,7 @@ import android.content.Context
 import android.widget.Toast
 import androidx.navigation.NavHostController
 import com.example.wazitoecommerce.models.User
+import com.example.wazitoecommerce.navigation.ROUT_ADDPRODUCT
 import com.example.wazitoecommerce.navigation.ROUT_HOME
 import com.example.wazitoecommerce.navigation.ROUT_LOGIN
 import com.google.firebase.auth.FirebaseAuth
@@ -46,7 +47,7 @@ class AuthViewModel(var navController:NavHostController, var context:Context) {
             progress.dismiss()
             if (it.isSuccessful){
                 Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
-                navController.navigate(ROUT_HOME)
+                navController.navigate(ROUT_ADDPRODUCT)
             }else{
                 Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
             }

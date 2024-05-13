@@ -43,7 +43,7 @@ fun ElectronicScreen(navController: NavHostController){
 
     Column(modifier = Modifier.fillMaxSize()
         .paint(
-            painterResource(id = R.drawable.back1),
+            painterResource(id = R.drawable.back4),
             contentScale = ContentScale.FillBounds
         )
     ) {
